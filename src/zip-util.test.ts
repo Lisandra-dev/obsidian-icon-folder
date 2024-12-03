@@ -95,7 +95,6 @@ describe('getFileFromJSZipFile', () => {
   it('should transform a JSZip file into a File object', async () => {
     const file: any = {
       name: 'file.svg',
-      // eslint-disable-next-line @typescript-eslint/no-empty-function
       async: () => {},
     };
 

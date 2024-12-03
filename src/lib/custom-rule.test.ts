@@ -101,7 +101,6 @@ describe('removeFromAllFiles', () => {
     document.body.innerHTML = '';
     vi.restoreAllMocks();
     removeIconInNode = vi.spyOn(dom, 'removeIconInNode');
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
     removeIconInNode.mockImplementationOnce(() => {});
     rule = {
       for: 'everything',
@@ -214,7 +213,6 @@ describe('add', () => {
     document.body.innerHTML = '';
     vi.restoreAllMocks();
     createIconNode = vi.spyOn(dom, 'createIconNode');
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
     createIconNode.mockImplementationOnce(() => {});
     plugin = {
       app: {

@@ -244,15 +244,16 @@ export default class IconizePlugin extends Plugin {
         };
 
         menu.addItem((item: MenuItem) => {
-          if (Platform.isDesktop) item.setTitle('Iconize').setIcon('tag')
+          if (Platform.isDesktop) item.setTitle('Iconize').setIcon('tag');
           else {
             menu.addSeparator();
             item.setIsLabel(true);
           }
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           //@ts-ignore
-            const subMenu = Platform.isDesktop ? (item.setSubmenu() as Menu) : menu;
-            subMenu.addItem(addIconMenuItem);
+          const subMenu = Platform.isDesktop
+            ? (item.setSubmenu() as Menu)
+            : menu;
+          subMenu.addItem(addIconMenuItem);
 
           const filePathData = this.getData()[file.path];
           const hasNestedIcon =

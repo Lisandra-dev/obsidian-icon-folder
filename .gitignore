@@ -28,3 +28,5 @@ docs/.vitepress/cache
 
 # Vitest
 coverage
+.hotreload
+
